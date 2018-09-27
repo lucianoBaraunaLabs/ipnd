@@ -1,2 +1,2 @@
-# ipnd
-Repositório com os projetos do curso Nanoodreeg  Introdução a Programação
+# Nanodegree ipnd
+Repositório com os projetos do curso Nanodegree Introdução a Programação
