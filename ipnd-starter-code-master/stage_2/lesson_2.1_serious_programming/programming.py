@@ -7,7 +7,12 @@
 
 # https://classroom.udacity.com/nanodegrees/nd000/parts/0001345403/modules/356813882475460/lessons/4180729266/concepts/49786550990923
 
-print 3
-print 1 + 1
+# print 3
+# print 1 + 1
+
+# # Calculando resultado
+# print 7 * (7 * (24 * 60))
+
+print 2 / 2.5
 
 # Add your own code and notes here
