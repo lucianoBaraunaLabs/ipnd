@@ -60,7 +60,7 @@ def biggest(a,b,c):
 
 
 print biggest(1, 2, 3)
-#>>> 9
+#>>> 3
 
 print biggest(1, 3, 2)
 
