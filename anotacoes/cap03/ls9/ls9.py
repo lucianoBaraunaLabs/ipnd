@@ -13,8 +13,6 @@
 #     part_after = somestring[location + length:]
 #     return part_before + part_after
 
-
-
 #  Minha solução para resolver o problema
 def remove(somestring, sub):
     """Return somestring with sub removed."""
