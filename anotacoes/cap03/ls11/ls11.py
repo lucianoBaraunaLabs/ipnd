@@ -39,3 +39,17 @@
 # print "What will this print?"
 # print first_title
 # print first_description
+
+#Quiz 07 - Países
+# Given the variable countries defined as:
+
+# #             Name    Capital  Populations (millions)
+# countries = [['China','Beijing',1350],
+#              ['India','Delhi',1210],
+#              ['Romania','Bucharest',21],
+#              ['United States','Washington',307]]
+
+# # Write code to print out the capital of India
+# # by accessing the list
+
+# print countries[1][1]
