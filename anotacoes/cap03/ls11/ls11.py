@@ -160,3 +160,6 @@
 
 # print find_element(['alpha','beta'],'gamma')
 # #>>> -1
+
+for n in range(100):
+    print "Hello",  n
