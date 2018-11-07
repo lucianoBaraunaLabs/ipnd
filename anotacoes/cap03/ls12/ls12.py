@@ -202,6 +202,29 @@
 # (hence a year is 360 days, instead of 365).
 # 
 
+def isLeapYear(year):
+    if year % 400 == 0:
+        return True
+    if year % 100 == 0:
+        return False
+    if year % 4 == 0:
+        return True
+    return False
+
+
+def daysInMonth(year, month):
+    # \ aqui significa uma quebra de linha para operador não ficar muito grande
+    if month == 1 or month == 3 or month == 5 or month == 7 \
+    or month == 8 or month == 10 or month == 12:
+        return 31
+    else:
+        if month == 2:
+            if isLeapYear(year):
+                return 29
+            return 28
+        else:
+            return 30
+
 def nextDay(year, month, day):
     """Simple version: assume every month has 30 days"""
     if day < 30:
@@ -234,4 +257,6 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
     return days
 
 
-print daysBetweenDates(2018, 1, 1, 2018, 12, 28)
+print daysBetweenDates(1988, 6, 15, 2018, 12, 28)
+
+print isLeapYear(2012)
