@@ -1,18 +1,25 @@
 # -*- coding: utf-8 -*-
 
+# Here's another chance to practice your for loop skills. Write code for the 
+# function word_in_pos (meaning word in parts_of_speech), which takes in a string 
+# word and a list parts_of_speech as inputs. If there is a word in parts_of_speech
+# that is a substring of the variable word, then return that word in parts_of_speech, 
+# else return None.
 
-def greatest(list_of_numbers):
-    if not list_of_numbers:
-        return 0
-    index = 1
-    value_actual = list_of_numbers[0]
-    while index < len(list_of_numbers):
-        if value_actual < list_of_numbers[index]:
-            value_actual = list_of_numbers[index]
-        index += 1
-    return value_actual
 
-print greatest([4,23,1])
-#>>> 23
-print greatest([])
-#>>> 0
+def word_in_pos(word, parts_of_speech):
+    # your code here
+    for pos in parts_of_speech:
+        if pos in word:
+            return pos
+    return None
+
+
+test_cases = ["NOUN", "FALSE", "<<@PERSON><", "PLURALNOUN"]
+parts_of_speech = ["PERSON", "PLURALNOUN", "NOUN"]
+
+
+print word_in_pos(test_cases[0], parts_of_speech)
+print word_in_pos(test_cases[1], parts_of_speech)
+print word_in_pos(test_cases[2], parts_of_speech)
+print word_in_pos(test_cases[3], parts_of_speech)
