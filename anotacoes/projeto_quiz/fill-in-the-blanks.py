@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # IPND Projeto Final
 
 # Você construiu um jogo Mad-Libs com alguma ajuda de Sean.
@@ -31,3 +32,35 @@ tuple, and ___4___ or can be more complicated such as objects and lambda functio
 # Dica: Pode ajudar a pensar sobre como este projeto se relaciona com o gerador Mad Libs que você construiu com Sean.
 # No gerador Mad Libs, você pega um parágrafo e substitui todas as instâncias de NOUN e VERB.
 # Como você pode adaptar esse design para trabalhar com espaços em branco numerados?
+
+frase_lacuna_resposta = {
+    "facil": {
+        "frase": "O __1__ do __2__ do __3__ é __4__",
+        "lacuna": ["__1__", "__2__", "__3__", "__4__"],
+        "resposta":["peito", "pé", "pedro", "preto"]
+    },
+    "medio": {
+        "frase": "O __1__ foi __2__ em __3__ de __4__ de __5__",
+        "lacuna": ["__1__", "__2__", "__3__", "__4__", "__5__"],
+        "resposta":["Brasil", "descoberto", "22", "abril", "1500"]
+    },
+    "dificil": {
+        "frase": "A __1__ de __2__ e __3__ aconteceu em __4__ e __5__ de __6__ em __7__",
+        "lacuna": ["__1__", "__2__", "__3__", "__4__", "__5__", "__6__", "__7__"],
+        "resposta":["Bomba", "Hiroshima", "Nagasaki", "6", "9", "agosto", "1945"]
+    }
+}
+
+def saudacoes():
+    """
+    Exibe mensagem de boas vindas
+    """
+    print "Bem vindo ao jogo !!!!"
+
+
+def start():
+    saudacoes()
+
+start()
+
+
