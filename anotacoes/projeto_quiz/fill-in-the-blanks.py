@@ -36,14 +36,23 @@ def pergunta_dificuldade():
         else:
             dificuldade = raw_input('> Opção inválida, tente novamente.\n')
 
-def obtem_frase_dificuldade():
-    return frase_lacuna_resposta['facil']["frase"], frase_lacuna_resposta['facil']["lacuna"]
+def obtem_frase_dificuldade(dificuldade):
+    return frase_lacuna_resposta[dificuldade]["frase"], frase_lacuna_resposta[dificuldade]["lacuna"]
 
+def pergunta_resposta_lacuna(lacuna, indice_atual):
+
+    print lacuna, indice_atual
+    return lacuna
+    # resposta_pergunta = raw_input('> A palavra do campo ' + lacuna + ' é ?')
+    # if resposta_pergunta === 
+    
 def start():
     saudacoes()
     dificuldade = pergunta_dificuldade()
-    frase, dificuldade = obtem_frase_dificuldade()
-    print 'aqui é frase ' + frase, 'dificuldade aqui', dificuldade
+    frase, lacunas = obtem_frase_dificuldade(dificuldade)
+    for indice_atual, lacuna in enumerate(lacunas):
+        respostas = pergunta_resposta_lacuna(lacuna, indice_atual)
+    print 'aqui é frase ' + frase + '\n dificuldade aqui '+ dificuldade +  '\n resposta: ' + respostas
 
 start()
 
