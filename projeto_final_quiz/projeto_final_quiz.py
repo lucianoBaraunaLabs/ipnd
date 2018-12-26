@@ -97,12 +97,11 @@ def pergunta_resposta(frase, lista_lacunas, lista_respostas, qtd_tentativas):
         # Validação de tentativas
         while input_resposta != lista_respostas[indice_atual]:
             if limite_tentativas <= 1:
-                print '> Você excedeu o limite. Por favor começo novamente'
+                print '> Você não possui mais tentativas. Por favor começe novamente'
                 return
             else:
                 limite_tentativas = limite_tentativas - 1
-                print '> Resposta errada! Tente novamete.'
-                print '> Você tem mais ' + str(limite_tentativas) + ' chances de errar!\n'
+                print '> Resposta errada! Tente novamete. \n> Você tem mais ' + str(limite_tentativas) + ' chances de errar!\n'
                 print frase_nova
                 input_resposta = raw_input('A palavra do campo ' + lacuna_atual + ' é ?\n').lower()
         
