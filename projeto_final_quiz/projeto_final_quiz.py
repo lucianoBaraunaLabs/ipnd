@@ -101,7 +101,7 @@ def pergunta_resposta(frase, lista_lacunas, lista_respostas, qtd_tentativas):
                 return
             else:
                 limite_tentativas = limite_tentativas - 1
-                print '> Resposta errada! Tente novamete. \n> Você tem mais ' + str(limite_tentativas) + ' chances de errar!\n'
+                print '> Resposta errada! Tente novamete. \n> Você tem mais ' + str(limite_tentativas) + ' tentativas!\n'
                 print frase_nova
                 input_resposta = raw_input('A palavra do campo ' + lacuna_atual + ' é ?\n').lower()
         
