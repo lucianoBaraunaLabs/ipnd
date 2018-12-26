@@ -73,6 +73,24 @@ def obtem_dados_jogo(dificuldade):
     configuracoes_jogo = frase_lacunas_resposta[dificuldade]
     return configuracoes_jogo["frase"], configuracoes_jogo["lacunas"], configuracoes_jogo["respostas"], configuracoes_jogo["tentativas"]
 
+def msg_tentativas(num_tentativa, frase_reposta):
+    """
+    Concentra as messagens padrões das tentativas
+
+    Args:
+
+    num_tentativa (int): Valor atual da quantidade de tentativas
+    frase_reposta (string): Frase do jogo atualizada para ser mostrada
+
+    Return:
+    (string): Mensagem
+
+    """
+    if num_tentativa == 0:
+        return '> Você excedeu o limite. Por favor começe novamente'
+    else:
+        return '> Resposta errada! Tente novamete. \n' + '> Você tem mais ' + str(num_tentativa) + ' chances de errar!\n' + frase_reposta
+
 def pergunta_resposta(frase, lista_lacunas, lista_respostas, qtd_tentativas):
     """
     Realiza a pergunta
@@ -94,16 +112,16 @@ def pergunta_resposta(frase, lista_lacunas, lista_respostas, qtd_tentativas):
     for indice_atual, lacuna_atual in enumerate(lista_lacunas):
         input_resposta = raw_input('> A palavra do campo ' + lacuna_atual + ' é ? \n').lower()
 
+        
+
         # Validação de tentativas
         while input_resposta != lista_respostas[indice_atual]:
-            if limite_tentativas <= 1:
-                print '> Você excedeu o limite. Por favor começo novamente'
+            if limite_tentativas == 0:
+                print msg_tentativas(limite_tentativas, '')
                 return
             else:
                 limite_tentativas = limite_tentativas - 1
-                print '> Resposta errada! Tente novamete.'
-                print '> Você tem mais ' + str(limite_tentativas) + ' chances de errar!\n'
-                print frase_nova
+                print msg_tentativas(limite_tentativas, frase_nova)
                 input_resposta = raw_input('A palavra do campo ' + lacuna_atual + ' é ?\n').lower()
         
         print '> Resposta certa! Veja como está ficando a frase:\n'
