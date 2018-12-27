@@ -41,18 +41,13 @@ def pergunta_dificuldade():
     string: Nível de dificuldade
 
     """
-    dificuldade = raw_input('>>> Escolha um nível de dificuldade : (iniciante | facil | medio | dificil) \n').lower()
+    niveis = ['iniciante', 'facil', 'medio', 'dificil']
+    escolha = raw_input('>>> Escolha um nível de dificuldade : ' + ' | '.join(niveis) + '\n').lower()
     while True:
-        if dificuldade == 'iniciante':
-            return dificuldade
-        if dificuldade == 'facil':
-            return dificuldade
-        elif dificuldade == 'medio':
-            return dificuldade
-        elif dificuldade == 'dificil':
-            return dificuldade
+        if escolha in niveis :
+            return escolha
         else:
-            dificuldade = raw_input('> Opção inválida, tente novamente.\n')
+            escolha = raw_input('> Opção inválida, tente novamente.\n')
 
 def obtem_dados_jogo(dificuldade):
     """
